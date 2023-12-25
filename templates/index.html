@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silly Game Reviews</title>
+</head>
+<body>
+    <h1>Silly Game Reviews</h1>
+    <form action="/generate_reviews" method="post">
+        <label for="game_title">Enter Game Title:</label>
+        <input type="text" id="game_title" name="game_title" required>
+        <button type="submit">Generate Reviews</button>
+    </form>
+    {% if reviews %}
+        <h2>Original Reviews</h2>
+        <ul>
+            {% for review in reviews %}
+                <li>{{ review }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if silly_reviews %}
+        <h2>Silly Reviews</h2>
+        <ul>
+            {% for silly_review in silly_reviews %}
+                <li>{{ silly_review }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

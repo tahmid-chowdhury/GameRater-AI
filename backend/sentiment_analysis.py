@@ -34,6 +34,6 @@ def analyze_sentiment(input):
     }
 
 # To test the function of the sentiment analysis:
-game_url = 'https://www.metacritic.com/game/minecraft/'
-result = analyze_sentiment(scrape_reviews(game_url))
-print(result)
+# game_url = 'https://www.metacritic.com/game/asgards-wrath-2/'
+# result = analyze_sentiment(scrape_reviews(game_url))
+# print(result)
